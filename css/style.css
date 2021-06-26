@@ -2,7 +2,7 @@
     font-family: sans-serif;
 }
 
-#userList {
+.userList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
