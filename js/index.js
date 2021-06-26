@@ -41,11 +41,11 @@ function renderUsers(users) {
     //     userList.firstElementChild.remove();
     // }
     const newUserList = document.createElement('ul');
-    newUserList.classList.add(userList);
+    userList.classList.add('userListItem');
     document.getElementById('root').append(newUserList);
     const liUserColletion = users.map(user => createUserListItem(user));
 
-    userList.append(...liUserColletion);
+    newUserList.append(...liUserColletion);
 }
 
 function createUserListItem({
