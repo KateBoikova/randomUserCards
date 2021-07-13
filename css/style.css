@@ -1,29 +1,64 @@
 :root {
-    font-family: sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #FFF1D3;
 }
+
 
 .userList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: stretch;
 }
 
 .userListItem {
     margin: 20px;
-    width: 200px;
-    border: 2px solid red;
-    border-radius: 5px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.993);
+}
+
+.topBlock {
+    height: 100px;
+    width: 100%;
+    margin-bottom: auto;
 }
 
 .userListItem > img {
+    border: 2px solid white;
     border-radius: 50%;
+    width: 30%;
+    margin-top: -50px;
+}
 
+.followBtn {
+    color: white;
+    font-size: 1.15em;
+    width: 100px;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .userFullName {
     margin: 15px;
+    font-size: 1.4em;
 }
+
+.userAge,
+.userEmail {
+    margin-bottom: 10px;
+}
+
 
 .buttonContainer {
     display: flex;
@@ -32,4 +67,50 @@
 
 .buttonContainer > button {
     margin: 10px;
+    border: none;
+    height: 30px;
+    width: 90px;
+    background-color: #F9BC3C;
+    color: #FFF1D3;
+    font-weight: 700;
+    box-shadow: #F9BC3C;
+    border-radius: 5px;
+}
+
+.returnBtn {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-image: url(../arrow-left-circle.png);
+    border: none;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+#selectedUsersList {
+    min-height: 50px;
+    margin: 5px 10px;
+}
+
+.selectedUser {
+    border: 2px solid #FFCA5D;
+    box-shadow: 0 0 10px 5px #FFD57F; 
+}
+
+.selectedUsersListItem,
+.deleteSelections {
+    display: inline-block;
+    padding: 5px;
+    margin: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid #F9BC3C;
+    background-color: #FFD57F;
+}
+
+.deleteSelections {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #FF615D;
+    color: white;
 }
